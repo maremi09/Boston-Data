@@ -1,6 +1,11 @@
 ## Boston City Data Exercise
+
+The code in this repository is my solution to the task set to us on the MiT x Pro fullstack course. This taught me how to import, extract and manipulate data in order to achieve a useful result.
+
+The original task was as follows:
+
 The goal of this exercise is to pick out the top 5 earners in Boston (total salary + overtime) and list them out in the web page as shown below:
-Name     Total Earned 
+
 
 Next, pick out the number of people working in the city of Boston who earn over $100,000 and display it on the web page as shown below: 
 Number of people working in Boston earning over $100,000 is xxxx.
