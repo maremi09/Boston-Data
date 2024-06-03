@@ -1,0 +1,32 @@
+<div id="container" style="text-align: center;">
+  <!-- populated by JS-->
+</div>
+<script src="./boston.js"></script>
+<script>
+  function renderBoston(boston, container) {
+    const person = boston.data;
+    const len = boston.data.length;
+
+    // Sorting salary in descending order
+    person.sort(function(a, b) {
+      return b[18] - a[18];
+    });
+
+    // People earning over $100k
+    const Above100k = person.filter(p => p[18] > 100000).length;
+
+    let html = '<div>People earning above $100,000: ' + Above100k + '</div>';
+    html += '<table border="1" style="margin: 0 auto; text-align: left;"><tr><th>Name</th><th>Job Title</th><th>Salary</th></tr>';
+    for (let i = 0; i < len; i++) {
+      html += '<tr>' +
+        '<td>' + person[i][8] + '</td>' +
+        '<td>' + person[i][9] + '</td>' +
+        '<td>' + person[i][18] + '</td>' +
+      '</tr>';
+    }
+    html += '</table>';
+    
+    container.innerHTML = html;
+  }
+  renderBoston(boston, document.getElementById('container'));
+</script>
